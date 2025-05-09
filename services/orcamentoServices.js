@@ -36,6 +36,7 @@ async function deletarConta(id) {
         const [res] = await conexao.query(sql, [id]);
         return true;
     } catch (err) {
+        console.error("Erro ao deletar conta:", err); // Log do erro
         return false;
     }
 }
